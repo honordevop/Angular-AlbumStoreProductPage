@@ -1,10 +1,6 @@
 import { Component, NgModule, OnInit } from '@angular/core';
+import { Album } from '../album';
 import { ProductService } from '../product.service';
-
-
-@NgModule({
-  declarations: [ProductService],
-})
 
 
 @Component({
@@ -13,8 +9,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-  albumInfo
-  ProductService: any;
+  albumInfo: Album;
 
   constructor(private _productService: ProductService) {}
 
